@@ -7,7 +7,7 @@ setup(
     author='Filipe Alves',
     author_email='filipe.alvesdefernando@gmail.com',
     install_requires=[
-        'pysmarthome~=2.0',
+        'pysmarthome~=2.2',
         'yeelight',
     ],
     packages=find_packages(),
