@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 setup(
     name='pysmarthome-yeelight',
     description='Yeelight plugin for pysmarthome',
-    version='1.1.0',
+    version='1.1.1',
     author='Filipe Alves',
     author_email='filipe.alvesdefernando@gmail.com',
     install_requires=[
-        'pysmarthome~=2.2',
+        'pysmarthome~=2.3',
         'yeelight',
     ],
     packages=find_packages(),
