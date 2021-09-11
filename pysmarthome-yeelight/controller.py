@@ -1,4 +1,4 @@
-from pysmarthome import RgbLampController, RgbLampsModel
+from pysmarthome import RgbLampController, RgbLampsModel, hex_to_rgb
 import yeelight
 
 class YeelightController(RgbLampController):
@@ -31,8 +31,10 @@ class YeelightController(RgbLampController):
         self.dev.set_brightness(val)
 
 
-    def set_color(self):
-        pass
+    def set_color(self, color):
+        if type(color) == str:
+            color = hex_to_rgb(color)
+        self.dev.set_rgb(*color)
 
 
     def get_color(self):
