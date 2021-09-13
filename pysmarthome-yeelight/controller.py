@@ -28,7 +28,7 @@ class YeelightController(RgbLampController):
 
 
     def set_brightness(self, val):
-        self.dev.set_brightness(val)
+        self.dev.set_brightness(int(val))
 
 
     def set_color(self, color):
