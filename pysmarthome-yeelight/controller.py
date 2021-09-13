@@ -1,8 +1,8 @@
-from pysmarthome import RgbLampController, RgbLampsModel, hex_to_rgb
+from pysmarthome import Model, RgbLampController, hex_to_rgb
 import yeelight
 
 class YeelightController(RgbLampController):
-    model_class = RgbLampsModel
+    model_class = Model.extends(RgbLampController.model_class, name='YeelightsModel')
 
 
     def on_load(self, addr='', **data):
