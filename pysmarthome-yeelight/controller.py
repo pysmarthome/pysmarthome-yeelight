@@ -1,4 +1,4 @@
-from pysmarthome import Model, RgbLampController, hex_to_rgb
+from pysmarthome import Model, RgbLampController, hex_to_rgb, int_to_hex_color
 import yeelight
 
 class YeelightController(RgbLampController):
@@ -38,9 +38,7 @@ class YeelightController(RgbLampController):
 
 
     def get_color(self):
-        properties = self.dev.get_properties()
-        rgb = properties['rgb']
-        return f'#{rgb}'
+        return int_to_hex_color(self.dev.get_properties()['rgb'])
 
 
     def get_power(self):
