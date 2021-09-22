@@ -3,6 +3,7 @@ import yeelight
 
 class YeelightController(RgbLampController):
     model_class = Model.extends(RgbLampController.model_class, name='YeelightsModel')
+    model_class.schema['addr'] = { 'type': 'string', 'default': '' }
 
 
     def on_load(self, addr='', **data):
